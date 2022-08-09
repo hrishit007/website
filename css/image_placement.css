@@ -1,0 +1,9 @@
+.row{
+    margin: 20px;
+}
+.member_photo>img{
+    width: 200px;
+}
+img{
+    border-radius: 50%;
+}

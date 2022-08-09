@@ -1,0 +1,591 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Bhawanday</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/jpg" href="img/iitr_logo.jpg" >
+        <link rel="stylesheet" type="text/css" href="img/">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
+	<script src="js/respond.min.js"></script> <![endif]--> 		
+        <!-- Place favicon.ico in the root directory -->
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <style type="text/css">
+    	.collapse {
+  margin-bottom: 20px;
+  .collapse__head {
+    position: relative;
+    cursor: pointer;
+    color: black;
+    font-weight: 700;
+    background: #e5e5e5;
+    padding: 5px 10px 5px 30px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid #333;
+    }
+    &.open {
+      &:after {
+        top: 10px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #333;
+      }
+    }
+  }
+  .collapse__body {
+    padding: 10px;
+    display: none;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+
+    </style>
+
+
+
+
+<style type="text/css">
+
+.menu {
+  -webkit-filter: url("#goo");
+          filter: url("#goo");
+}
+
+.menu-item, .menu-open-button {
+  background: rgba(0,0,0,.5);
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    box-shadow: -2px 0px 4px 0px rgba(0,0,0,.5);
+    position: absolute;
+    top: 20px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+
+}
+
+.menu-open {
+  display: none;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.hamburger-1 {
+  -webkit-transform: translate3d(0, -8px, 0);
+          transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+  -webkit-transform: translate3d(0, 8px, 0);
+          transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+          transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+          transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+          transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+      position: fixed;
+    left: 90%;
+    bottom: -5%;
+    margin-left: -190px;
+    padding-top: 20px;
+    padding-left: 190px;
+    width: 380px;
+    height: 250px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 20px;
+z-index:100;
+    text-align: left;
+}
+
+.menu-item:hover {
+  background: white;
+  color: #e91e63;
+}
+.menu-item:nth-child(3) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+.menu-item:nth-child(4) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+.menu-item:nth-child(5) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+.menu-item:nth-child(6) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+.menu-item:nth-child(7) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+.menu-item:nth-child(8) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+.menu-item:nth-child(9) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+
+.menu-open-button {
+  z-index: 2;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+.menu-open-button:hover {
+  -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+          transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+  -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+          transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+.menu-open:checked ~ .menu-item:nth-child(3) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+  -webkit-transform: translate3d(0.08361px, -104.99997px, 0);
+          transform: translate3d(0.08361px, -104.99997px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(4) {
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+  -webkit-transform: translate3d(90.9466px, -52.47586px, 0);
+          transform: translate3d(90.9466px, -52.47586px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(5) {
+  -webkit-transition-duration: 380ms;
+          transition-duration: 380ms;
+  -webkit-transform: translate3d(90.9466px, 52.47586px, 0);
+          transform: translate3d(90.9466px, 52.47586px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(6) {
+  -webkit-transition-duration: 480ms;
+          transition-duration: 480ms;
+  -webkit-transform: translate3d(0.08361px, 104.99997px, 0);
+          transform: translate3d(0.08361px, 104.99997px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(7) {
+  -webkit-transition-duration: 580ms;
+          transition-duration: 580ms;
+  -webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
+          transform: translate3d(-90.86291px, 52.62064px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(8) {
+  -webkit-transition-duration: 680ms;
+          transition-duration: 680ms;
+  -webkit-transform: translate3d(-91.03006px, -52.33095px, 0);
+          transform: translate3d(-91.03006px, -52.33095px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(9) {
+  -webkit-transition-duration: 780ms;
+          transition-duration: 780ms;
+  -webkit-transform: translate3d(-0.25084px, -104.9997px, 0);
+          transform: translate3d(-0.25084px, -104.9997px, 0);
+}
+
+</style>    
+<body >
+<!-- side menu -->
+
+
+<nav class="menu">
+  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+  <label class="menu-open-button" for="menu-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+
+  <a href="#protfolio_sec" class="menu-item" title="Gallery"> <i class="fa fa-photo"></i> </a>
+  <a href="#ltd_map_sec" class="menu-item" title="How to visit"> <i class="fa fa-map-o"></i> </a>
+  <a href="#tm_sec" class="menu-item" title="council"> <i class="fa fa-group"></i> </a>
+  <a href="guest.html" class="menu-item" title="Guest room booking"> <i class="fa fa-bed"></i> </a>
+  <a href="http://www.iitr.ac.in" class="menu-item" title="IITRoorkee page"> <i class="fa fa-university"></i> </a>
+  <a href="#" onclick="history.back();" class="menu-item" title="Back"> <i class="fa fa-ellipsis-h"></i> </a>
+
+</nav>
+		 <!-- start preloader -->
+        <div id="loader-wrapper">
+            <div class="logo"></div>
+            <div id="loader">
+            </div>
+        </div>
+        <!-- end preloader -->
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		
+		
+<!-- Start Header Section -->
+<header class="main_menu_sec navbar navbar-default navbar-fixed-top" style="background:#0c0c0ccc !important;  ">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12">
+              <div class="lft_hd" style="width: 60px !important">
+  <a href="index.html"><img src="img/iitr_logo.jpg" alt=""/></a><p style=" color: #666666;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 22px;
+  font-size: 20px;
+  font-weight: 700;
+  left: 87px;
+  color: white;">Vigyan Kunj  <br>IIT Roorkee <span style="font-size: 15px;"><span></p>
+              </div>
+          </div>			
+          <div class="col-lg-9 col-md-9 col-sm-12">
+              <div class="rgt_hd">					
+                  <div class="main_menu">
+                      <nav id="nav_menu">
+                          <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" 
+
+class="navbar-toggle collapsed" type="button">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          </button>	
+                      <div id="navbar">
+                          <ul>
+                              <li><a class="page-scroll" href="index.html">Back</a></li> 
+                              <li><a href="#">Bhawan <i class="fa fa-angle-down"></i></a>
+                                  <ul>							
+                                      <li><a class="page-scroll" href="#tstm_sec">Our Testimonial</a></li>
+                                      <li><a class="page-scroll" href="bhawanday.html">Bhawan Day</a></li>
+                                  </ul>
+                              </li> 						
+
+                          <li><a target="_blank" href="#">Hostel<i class="fa fa-angle-down"></i></a>
+                              <ul>
+                              <li><a target="_blank" class="page-scroll" href="single.html">Living rooms</a></li>
+                              <li><a target="_blank" class="page-scroll" href="guest.html">Guest rooms</a></li>
+
+                              </ul>
+                          </li> 
+                          <li><a target="_blank" href="#">Our Team<i class="fa fa-angle-down"></i></a>
+                              <ul>
+                                  <li><a target="_blank" class="page-scroll" href="team.html">Current Team</a></li>
+                                  <li><a target="_blank" class="page-scroll" href="previous_team.html">Previous Teams</a></li>
+                              </ul>
+                          </li> 
+                          <li><a class="page-scroll" href="#protfolio_sec">Gallery<i class="fa fa-angle-down"></i></a>
+                              <ul>
+                                  <li><a class="page-scroll" href="#">Bhawan Day</a></li>
+                                  <li><a target="_blank" class="page-scroll" href="events.html">Events</a></li>
+                              </ul>
+                          </li>
+                          <li><a class="page-scroll" href="#ctn_sec">Contact Us</a></li>
+                      </ul>
+                      </div>		
+                      </nav>			
+                  </div>					
+                      
+              </div>
+          </div>	
+      </div>	
+  </div>	
+</header>
+<!-- End Header Section -->
+<!-- Start Bhawan Day Section -->
+<section id="bhawanday_sec">
+  <div class="container">
+    <div><br><br><br><br><br><center><h1>Bhawan Day 2022</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, commodi et laborum iure maiores, odio, perspiciatis mollitia incidunt exercitationem pariatur tempore eveniet debitis ad nulla quam sint. Recusandae, asperiores. Quibusdam architecto, quos hic vel voluptas rerum ipsa culpa ut, similique deleniti iusto fugiat cupiditate provident! Voluptatum beatae sint inventore dicta possimus sequi, aliquid placeat rem laudantium labore fuga cupiditate esse deserunt blanditiis ipsa! Eligendi et veniam harum, tenetur assumenda consectetur totam saepe sed, voluptas praesentium asperiores culpa? Deserunt ullam minus culpa harum, quidem delectus dicta, ex consequatur corrupti error, dolores in neque! Impedit sit possimus laboriosam rerum, cum officia quod.</p>
+    </center></div>
+    <div>
+      <center><h1>Bhawan Day Celebrations</h1></center>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs6">
+        <img src="images/placeholder.jpg" alt="Image not found" height="100%" width="100%"">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- start contact us Section -->
+<section id="ctn_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Contact Info</h1>
+				</div>			
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="cnt_info">
+					<ul>
+						<li><i class="fa fa-map-marker"></i><p>Roorkee - Haridwar Highway, Roorkee, Uttarakhand 247667</p></li>
+						<li><i class="fa fa-envelope"></i><p>pgadm@iitr.ernet.in</p></li>
+						<li><i class="fa fa-phone"></i><p>+91-1332-284010, 285875</p></li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</div>
+</section>
+<!-- End contact us  Section -->
+
+
+<!-- start footer Section -->
+<footer id="ft_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ft">						
+					<ul>
+						<li><a  target="_blank" href="https://www.facebook.com/Vigyan-Kunj-Hostel-105557217661817"><i class="fa fa-facebook"></i></a></li>
+						<li><a  target="_blank"href="https://www.instagram.com/vigyankunj/"><i class="fa fa-instagram"></i></a></li>
+						<li><a  target="_blank" href="https://dribbble.com/shots/2491401-IIT-Roorkee-Main-Building"><i class="fa fa-dribbble"></i></a></li>
+						<li><a  target="_blank" href="https://in.pinterest.com/search/pins/?q=iit%20roorkee&rs=typed&term_meta[]=iit
+
+%7Ctyped&term_meta[]=roorkee%7Ctyped"><i class="fa fa-pinterest"></i></a></li>
+						<li><a  target="_blank" href="https://in.linkedin.com/in/iit-roorkee-90aa71100"><i class="fa fa-linkedin"></i></a></li>
+					</ul>					
+				</div>
+				<ul class="copy_right">
+					<li>&copy;Vigyan Kunj 2022 IIT Roorkee</li>
+					<li>moderated by <span style="color:black;font-weight: 500;">Km Dimple[PhD,ECE] and Abhishek Kumar[PhD,EE]</span></li>
+					<li>maintained by <span style="color:black;font-weight: 500;">Hrishit B P [BTech,CSE]</span></li>
+				</ul>					
+			</div>	
+		</div>
+	</div>
+</footer>
+<!-- End footer Section -->
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/showHide.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+<script src="js/plugins.js"></script>
+<!-- Google Map js -->
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script>
+			function initialize() {
+			  var mapOptions = {
+				zoom: 14,
+				scrollwheel: false,
+				center: new google.maps.LatLng(41.092586000000000000, -75.592688599999970000)
+			  };
+			  var map = new google.maps.Map(document.getElementById('googleMap'),
+				  mapOptions);
+			  var marker = new google.maps.Marker({
+				position: map.getCenter(),
+				animation:google.maps.Animation.BOUNCE,
+				icon: 'img/map-marker.png',
+				map: map
+			  });
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+<script src="js/main.js"></script>
+
+<script src="showHide.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+
+   $('.show_hide').showHide({			 
+		speed: 1000,  // speed you want the toggle to happen	
+		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+		changeText: 1, // if you dont want the button text to change, set this to 0
+		showText: 'View',// the button text to show when a div is closed
+		hideText: 'Close' // the button text to show when a div is open
+					 
+	}); 
+
+
+});
+
+</script>
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    });
+</script>
+<script type="text/javascript">
+    	$('.collapse__head').click(function(){
+ $(this).toggleClass('open'); 
+
+$(this).parent().find('.collapse__body').slideToggle('fast');
+
+});
+    </script>
+<script>
+
+  //Hide Overflow of Body on DOM Ready //
+$(document).ready(function(){
+    $("body").css("overflow", "hidden");
+});
+
+// Show Overflow of Body when Everything has Loaded 
+$(window).load(function(){
+    $("body").css("overflow", "visible");        
+    var nice=$('html').niceScroll({
+	cursorborder:"5",
+	cursorcolor:"#00AFF0",
+	cursorwidth:"3px",
+	boxzoom:true, 
+	autohidemode:true
+	});
+
+});
+</script>
+
+
+
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+  $("img").click(function(){
+  var t = $(this).attr("src");
+  $(".modal-body").html("<img src='"+t+"' class='modal-img'>");
+  $("#myModal").modal();
+});
+
+$("video").click(function(){
+  var v = $("video > source");
+  var t = v.attr("src");
+  $(".modal-body").html("<video class='model-vid' controls><source src='"+t+"' type='video/mp4'></source></video>");
+  $("#myModal").modal();  
+});
+});//EOF Document.ready
+</script>
+
+    </body>
+</html>
